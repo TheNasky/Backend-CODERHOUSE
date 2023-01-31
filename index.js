@@ -1,6 +1,6 @@
 import fs from "fs";
 
-class ProductManager {
+class ProductManager{
   constructor(path){
     this.products = [];
     this.path = path;
