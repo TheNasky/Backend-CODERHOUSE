@@ -30,6 +30,7 @@ class ProductManager{
     }
   }
   getProducts(){
+    this.loadDB()
     return this.products
   }
   getProductById(id){
@@ -78,7 +79,6 @@ class ProductManager{
 const román = new ProductManager("./products.json");
 
 //              <---Busca Productos---> //producto de prueba debería estar en products.json
-román.loadDB()
 console.log(román.getProducts());
 //              <---Agrega producto prueba 2 y busca--->
 console.log(román.addProduct("producto prueba2","Este es un producto prueba", 200, "Sin imagen","abc124",25));
